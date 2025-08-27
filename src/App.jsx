@@ -1,28 +1,36 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import Header from './components/Header.jsx';
+import Hero from './components/Hero.jsx';
+import Features from './components/Features.jsx';
+import ProductGrid from './components/ProductGrid.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cartCount, setCartCount] = useState(0);
+
+  const handleAddToCart = () => {
+    setCartCount((c) => c + 1);
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-neutral-950 text-white">
+      <Header cartCount={cartCount} />
+      <main>
+        <Hero />
+        <Features />
+        <section id="products" className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Shop Robots</h2>
+            <p className="mt-2 text-neutral-400">From home companions to warehouse workhorses, find your perfect bot.</p>
+            <div className="mt-8">
+              <ProductGrid onAddToCart={handleAddToCart} />
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
