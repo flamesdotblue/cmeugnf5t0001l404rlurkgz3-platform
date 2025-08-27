@@ -17,7 +17,6 @@ export default function Header({ cartCount = 0 }) {
 
           <nav className="hidden md:flex items-center gap-8">
             <a href="#products" className="text-sm text-neutral-300 hover:text-white transition">Shop</a>
-            <a href="#features" className="text-sm text-neutral-300 hover:text-white transition">Features</a>
             <a href="#support" className="text-sm text-neutral-300 hover:text-white transition">Support</a>
           </nav>
 
@@ -39,7 +38,6 @@ export default function Header({ cartCount = 0 }) {
           <div className="md:hidden pb-4">
             <nav className="flex flex-col gap-2">
               <a href="#products" className="px-2 py-2 rounded-md hover:bg-neutral-900 text-neutral-300 hover:text-white transition">Shop</a>
-              <a href="#features" className="px-2 py-2 rounded-md hover:bg-neutral-900 text-neutral-300 hover:text-white transition">Features</a>
               <a href="#support" className="px-2 py-2 rounded-md hover:bg-neutral-900 text-neutral-300 hover:text-white transition">Support</a>
             </nav>
           </div>

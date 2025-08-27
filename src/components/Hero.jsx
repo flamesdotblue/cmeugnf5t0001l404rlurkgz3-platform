@@ -25,8 +25,8 @@ export default function Hero() {
                 Shop Robots
                 <ArrowRight className="h-4 w-4" />
               </a>
-              <a href="#features" className="inline-flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-900 px-5 py-3 text-sm font-medium hover:bg-neutral-800 transition">
-                Explore Features
+              <a href="#support" className="inline-flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-900 px-5 py-3 text-sm font-medium hover:bg-neutral-800 transition">
+                Get Support
               </a>
             </div>
           </div>
